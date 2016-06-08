@@ -1,3 +1,57 @@
 <resources>
     <string name="app_name">Dear</string>
+
+    <string-array name="nav_menu">
+        <item>세팅</item>
+    </string-array>
+
+    <string name="head">
+        문장 선택을 도와주는\n
+        내 손안의 도우미\n
+    </string>
+
+    <string name="footer">
+        무박2일간 고생 많았어요.\n
+        조금씩 발전시켜 나가요~\n
+        \n
+        Copyright ⓒ 2016 Dear. All rights reserved.
+    </string>
+
+    <string-array name="availableHello">
+        <item>인사</item>
+        <item>날씨</item>
+        <item>감사</item>
+        <item>좋은</item>
+    </string-array>
+
+    <string-array name="availableBye">
+        <item>인사</item>
+        <item>날씨</item>
+        <item>감사</item>
+        <item>부탁</item>
+        <item>좋은</item>
+    </string-array>
+
+    <string name="license">
+
+        \n<b>Retrofit</b>\n
+          Copyright 2013 Square, Inc.\n
+        \n\n
+        <b>Typekit</b>\n
+          Copyright (c) 2015 Hien Ngo\n
+        \n\n
+        <b>Apache License 2.0</b>\n
+          Licensed under the Apache License, Version 2.0 (the "License");\n
+          you may not use this file except in compliance with the License.\n
+          You may obtain a copy of the License at\n
+        \n
+          http://www.apache.org/licenses/LICENSE-2.0\n
+          Unless required by applicable law or agreed to in writing, software\n
+          distributed under the License is distributed on an "AS IS" BASIS,\n
+          WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n
+          See the License for the specific language governing permissions and\n
+          limitations under the License.\n
+        \n\n
+
+    </string>
 </resources>

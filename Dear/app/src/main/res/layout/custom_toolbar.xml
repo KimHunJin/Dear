@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/colorBlack"
+    android:fitsSystemWindows="true"
+    android:minHeight="?attr/actionBarSize"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:id="@+id/relShowMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/icon" />
+
+        <ImageView
+            android:id="@+id/imgSearch"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/search" />
+
+
+        <ImageView
+            android:id="@+id/imgShare1"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/send" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lineShowSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoKeyWord"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.57"
+            android:clickable="true"
+            android:completionThreshold="1"
+            android:cursorVisible="true"
+            android:hint="키워드 입력"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorDarkWhite" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:layout_weight="0.43">
+
+            <ImageView
+                android:id="@+id/imgShare2"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/send" />
+
+            <ImageView
+                android:id="@+id/btnHB"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:layout_toLeftOf="@id/imgShare2"
+                android:background="@drawable/hello" />
+
+            <ImageView
+                android:id="@+id/btnKeyWord"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginRight="16dp"
+                android:layout_toLeftOf="@id/btnHB"
+                android:src="@drawable/search"
+                android:text="키워드 검색" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.Toolbar>

@@ -2,10 +2,10 @@
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="4dp"
     tools:context="kr.team12.hackathon.dear.MainActivity">
 
 
@@ -14,35 +14,46 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/edtMainContents"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginBottom="4dp"
-            android:layout_weight="0.9"
-            android:background="@drawable/retangle_box"
-            android:gravity="start"
-            android:hint="입력"
-            android:padding="8dp" />
+        <include layout="@layout/custom_toolbar" />
 
-        <Button
-            android:id="@+id/btnShare"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="match_parent"
             android:layout_marginTop="4dp"
-            android:layout_weight="0.1"
-            android:background="@drawable/retangle_box"
-            android:onClick="click"
-            android:text="공유하기" />
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <ListView
+                android:id="@+id/lstContext"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+            </ListView>
+
+            <EditText
+                android:id="@+id/edtMainContents"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/retangle_box"
+                android:gravity="start"
+                android:hint="어떤 이메일 인가요?"
+                android:textColorHint="@color/colorGray"
+                android:padding="8dp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
     <android.support.design.widget.NavigationView
-        android:id="@+id/nvView"
-        android:layout_width="wrap_content"
+        android:id="@+id/mainNav"
+        android:layout_width="240dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header" />
+        app:menu="@menu/drawer_view">
 
-
+    </android.support.design.widget.NavigationView>
 </android.support.v4.widget.DrawerLayout>
